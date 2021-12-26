@@ -3,7 +3,7 @@
 set -e
 
 ROOT_PASSWORD=$(bashio::config 'root_password')
-echo -n 'root:$ROOT_PASSWORD' | chpasswd
+echo -n root:$ROOT_PASSWORD | chpasswd
 bashio::log.info "Setting Root PW '$ROOT_PASSWORD'"
 
 
