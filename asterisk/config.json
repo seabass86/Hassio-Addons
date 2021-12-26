@@ -13,7 +13,6 @@
   ],
   "startup": "application",
   "boot": "auto",
-  "image": "ghcr.io/poeschl/ha-asterisk-{arch}",
   "map": ["share","config"],
   "ports": {
     "22/tcp": 2222,
