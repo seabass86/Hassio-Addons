@@ -9,7 +9,9 @@ RUN apk add --no-cache \
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 RUN adduser -h /home/vivek -s /bin/sh -D asteriskssh
 RUN echo -n 'asteriskssh:erw9fiuvi3fi3rqf' | chpasswd
-ENTRYPOINT [ "/init", "/entrypoint.sh"]
+RUN ssh-keygen -A
+RUN exec /usr/sbin/sshd -D -e "$@"
+ENTRYPOINT [ "/init"]
 
 CMD []
 COPY root /
