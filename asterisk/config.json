@@ -39,6 +39,8 @@
 
   },
   "schema": {
-    "config_files": ["match(/(share|config)/.+)"]
+    "config_files": ["match(/(share|config)/.+)"],
+    "key_folders": ["match(/(share|config)/.+)"],
+    "root_password": "string"
   }
 }
