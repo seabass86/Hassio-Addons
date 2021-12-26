@@ -14,5 +14,5 @@ RUN ssh-keygen -A
 #RUN exec /usr/sbin/sshd -D -e '$@'
 ENTRYPOINT [ "/init"]
 
-CMD ["/usr/bin/sudo", "/usr/sbin/sshd", "-D", "-o", "ListenAddress=0.0.0.0"]
 COPY root /
+CMD ["/usr/sbin/sshd","-D"]
