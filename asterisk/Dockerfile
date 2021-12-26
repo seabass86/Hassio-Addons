@@ -3,6 +3,7 @@
 FROM "ghcr.io/home-assistant/armv7-base:3.13"
 RUN apk update
 RUN apk add --no-cache \
+      sudo \
       openssh \
       asterisk=18.2.1-r2 \
       asterisk-sample-config=18.2.1-r2
