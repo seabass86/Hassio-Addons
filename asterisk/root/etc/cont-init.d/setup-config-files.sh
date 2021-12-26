@@ -2,7 +2,11 @@
 # shellcheck shell=bash
 set -e
 ROOT_Password==$(bashio::config 'root_password')
-echo -n 'root:$ROOT_password' | chpasswd
+echo -n 'root:$ROOT_Password' | chpasswd
+bashio::log.info "Setting Root PW '$ROOT_Password'"
+
+
+
 CONFIG_FILES=$(bashio::config 'config_files')
 
 for config in $CONFIG_FILES; do
