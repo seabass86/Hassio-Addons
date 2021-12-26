@@ -1,9 +1,10 @@
 #!/usr/bin/with-contenv bashio
 # shellcheck shell=bash
 set -e
-ROOT_Password=$(bashio::config 'root_password')
-echo -n 'root:$ROOT_Password' | chpasswd
-bashio::log.info "Setting Root PW '$ROOT_Password'"
+
+ROOT_PASSWORD=$(bashio::config 'root_password')
+echo -n 'root:$ROOT_PASSWORD' | chpasswd
+bashio::log.info "Setting Root PW '$ROOT_PASSWORD'"
 
 
 
@@ -14,7 +15,7 @@ for config in $CONFIG_FILES; do
 	cp "$config" '/etc/asterisk/'
 done
 
-key_folders=$(bashio::config 'config_files')
+key_folders=$(bashio::config 'key_folders')
 
 for config in $key_folders; do
         bashio::log.info "Copying all Keys from '$key_folders'"
