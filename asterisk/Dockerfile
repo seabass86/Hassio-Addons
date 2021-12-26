@@ -15,4 +15,4 @@ RUN ssh-keygen -A
 ENTRYPOINT [ "/init"]
 
 CMD []
-#COPY root /
+COPY root /
