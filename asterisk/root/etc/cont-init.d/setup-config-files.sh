@@ -8,6 +8,6 @@ for config in $CONFIG_FILES; do
 	bashio::log.info "Apply '$config'"
 	cp "$config" '/etc/asterisk/'
 done
-echo "Seabass86"
+bashio::log.info "Seabass"
 chown -R asterisk:asterisk /etc/asterisk
 chmod 640 -R /etc/asterisk
