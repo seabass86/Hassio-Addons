@@ -18,8 +18,8 @@ done
 key_folders=$(bashio::config 'key_folders')
 
 for config in $key_folders; do
-        bashio::log.info "Copying all Keys from '$key_folders'"
-        cp "$key_folders/*" '/etc/asterisk/keys/'
+        bashio::log.info "Copying all Keys from '$config'"
+        cp "$config/*" '/etc/asterisk/keys/'
 done
 
 bashio::log.info "Seabass"
