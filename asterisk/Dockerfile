@@ -1,6 +1,7 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
-
+#ARG BUILD_FROM
+#FROM $BUILD_FROM
+FROM "ghcr.io/home-assistant/armv7-base:3.13"
+RUN apk update
 RUN apk add --no-cache \
       openssh \
       asterisk=18.2.1-r1 \
@@ -11,7 +12,6 @@ RUN adduser -h /home/asteriskssh -s /bin/sh -D asteriskssh
 RUN echo -n 'asteriskssh:erw9fiuvi3fi3rqf' | chpasswd
 RUN ssh-keygen -A
 RUN exec /usr/sbin/sshd -D -e '$@'
-EXPOSE 22
 ENTRYPOINT [ "/init"]
 
 CMD []
