@@ -12,7 +12,7 @@ CONFIG_FILES=$(bashio::config 'config_files')
 
 for config in $CONFIG_FILES; do
 	bashio::log.info "Apply '$config'"
-	cp "$config" '/etc/asterisk/'
+	ln -sf "$config" '/etc/asterisk/'
 done
 
 key_folders=$(bashio::config 'key_folders')
