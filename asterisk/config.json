@@ -1,6 +1,6 @@
 {
   "name": "Asterisk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "slug": "asterisk",
   "description": "Asterisk is an open source framework for building communications applications. Asterisk turns an ordinary computer into a communications server",
   "url": "https://github.com/Poeschl/Hassio-Addons/tree/master/asterisk",
@@ -26,8 +26,8 @@
     "2727/udp": 2727
   },
   "ports_description": {
-    "22/tcp": 22,
-    "8088/tcp": 8088,
+    "22/tcp": "SSH",
+    "8088/tcp": "Http,
     "8089/tcp": "Https",
     "5060/tcp": "Port for SIP",
     "5060/udp": "Port for SIP",
