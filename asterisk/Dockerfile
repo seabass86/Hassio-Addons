@@ -8,9 +8,9 @@ RUN apk add --no-cache \
       openssl \
       asterisk=18.2.1-r2 \
       asterisk-sample-config=18.2.1-r2
-RUN cd /tmp && wget https://github.com/asterisk/asterisk/archive/refs/heads/master.zip
+#RUN cd /tmp && wget https://github.com/asterisk/asterisk/archive/refs/heads/master.zip
 RUN mkdir /etc/asterisk/keys
-RUN unzip /tmp/master.zip -d /tmp
+#RUN unzip /tmp/master.zip -d /tmp
 
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
