@@ -1,6 +1,6 @@
 {
   "name": "Asterisk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "slug": "asterisk",
   "description": "Asterisk is an open source framework for building communications applications. Asterisk turns an ordinary computer into a communications server",
   "url": "https://github.com/seabass86/Hassio-Addons/tree/master/asterisk",
