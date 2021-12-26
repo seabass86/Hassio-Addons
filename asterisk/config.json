@@ -16,12 +16,16 @@
   "image": "ghcr.io/poeschl/ha-asterisk-{arch}",
   "map": ["share","config"],
   "ports": {
+    "8088/tcp": 8088,
+    "8089/tcp": 8089,
     "5060/tcp": 5060,
     "5060/udp": 5060,
     "4569/udp": 4569,
     "2727/udp": 2727
   },
   "ports_description": {
+    "8088/tcp": "Http",
+    "8089/tcp": "Https",
     "5060/tcp": "Port for SIP",
     "5060/udp": "Port for SIP",
     "4569/udp": "Port for IAX2",
