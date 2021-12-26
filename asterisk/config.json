@@ -26,7 +26,7 @@
   },
   "ports_description": {
     "22/tcp": "SSH",
-    "8088/tcp": "Http,
+    "8088/tcp": "Http",
     "8089/tcp": "Https",
     "5060/tcp": "Port for SIP",
     "5060/udp": "Port for SIP",
