@@ -16,7 +16,7 @@
   "image": "ghcr.io/poeschl/ha-asterisk-{arch}",
   "map": ["share","config"],
   "ports": {
-    "22/tcp": 22,
+    "22/tcp": 2222,
     "8088/tcp": 8088,
     "8089/tcp": 8089,
     "5060/tcp": 5060,
