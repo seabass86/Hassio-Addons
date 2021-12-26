@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bashio
 # shellcheck shell=bash
 set -e
-ROOT_Password==$(bashio::config 'config_files')
+ROOT_Password==$(bashio::config 'root_password')
 echo -n 'root:$ROOT_password' | chpasswd
 CONFIG_FILES=$(bashio::config 'config_files')
 
