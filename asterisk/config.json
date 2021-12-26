@@ -33,7 +33,8 @@
     "2727/udp": "Port for MGCP"
   },
   "options": {
-    "config_files": []
+    "config_files": [],
+    "key_folders": []
   },
   "schema": {
     "config_files": ["match(/(share|config)/.+)"]
