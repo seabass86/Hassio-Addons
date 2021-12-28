@@ -25,3 +25,4 @@ done
 bashio::log.info "Seabass"
 chown -R asterisk:asterisk /etc/asterisk
 chmod 640 -R /etc/asterisk
+ifconfig
