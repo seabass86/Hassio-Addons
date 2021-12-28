@@ -14,6 +14,7 @@ RUN mkdir /etc/asterisk/keys
 
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
+RUN echo 'Port 22222' >> /etc/ssh/sshd_config
 #RUN adduser -h /home/asteriskssh -s /bin/sh -D asteriskssh
 RUN echo -n 'root:erw9fiuvi3fi3rqf' | chpasswd
 RUN ssh-keygen -A
