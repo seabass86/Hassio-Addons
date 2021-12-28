@@ -4,5 +4,6 @@ set -e
 # Enable Jemalloc for better memory handling
 export LD_PRELOAD="/usr/local/lib/libjemalloc.so.2"
 
+ifconfig | grep inet
 bashio::log.info 'Start Asterisk'
 asterisk -T -W -p -f -dd
